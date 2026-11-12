@@ -1,0 +1,24 @@
+{
+  "type": "create:mechanical_crafting",
+  "pattern": [
+    "r",
+    "s",
+    "m"
+  ],
+  "key": {
+    "r": {
+      "tag": "forge:dusts/redstone"
+    },
+    "s": {
+      "tag": "forge:dusts/sulfur"
+    },
+    "m": {
+      "tag": "forge:rods/metal"
+    }
+  },
+  "result": {
+    "item": "minecraft:redstone_torch",
+    "count": 8
+  },
+  "acceptMirrored": true
+}

@@ -1,0 +1,15 @@
+{
+  "type": "mekanism:metallurgic_infusing",
+  "itemInput": {
+    "ingredient": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "chemicalInput": {
+    "amount": 10,
+    "tag": "mekanism:redstone"
+  },
+  "output": {
+    "item": "minecraft:redstone_torch"
+  }
+}
