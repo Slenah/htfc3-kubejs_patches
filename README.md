@@ -52,7 +52,7 @@ Full changelogs:
 • Made it possible to reignite Dead Torches with a Permanent Torch in hand (previously you had to specifically hold a non-permanent TFC Torch)  
 • Made it possible to ignite Dead Torches by right-clicking a fueled Blaze Burner with them in hand  
 • Made Liquid Blaze Burners a valid heat source for PNC machines. Previously, only the non-liquid variant was valid  
-• Lowered required temperature for some TFC pot recipes from like 500C to 100C, making them work with Peat and making them trigger earlier
+• Lowered required temperature for some TFC pot water boiling recipes from like 500C to 100C, making them work with Peat and making them trigger earlier
 
 ### Balancing
 • Made the Cake recipe also accept Cherries alongside Cranberries  

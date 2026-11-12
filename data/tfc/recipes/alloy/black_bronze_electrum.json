@@ -1,0 +1,16 @@
+{
+  "type": "tfc:alloy",
+  "result": "tfc:black_bronze",
+  "contents": [
+    {
+      "metal": "tfc:copper",
+      "min": 0.5,
+      "max": 0.7
+    },
+    {
+      "metal": "tfc_ie_addon:electrum",
+      "min": 0.2,
+      "max": 0.5
+    }
+  ]
+}
