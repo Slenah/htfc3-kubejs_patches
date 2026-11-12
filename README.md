@@ -60,6 +60,7 @@ Full changelogs:
 • Made the Cake recipe also accept Cherries alongside Cranberries  
 • Changed recipe for Hose Nozzles to require anvil work  
 • Made the Supplementaries Soap recipe accept more blubber  
+• Added vanilla fuel values to lignite and bituminous coal, making it possible to burn them in a TC solid fuel heater  
 
 ### Fixes
 • Fixed applying respirator filters via crafting table causing a crash  

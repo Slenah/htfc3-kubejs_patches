@@ -1,20 +1,22 @@
 onEvent('item.modification', event => {
     // Durability changes
-    event.modify('exnihilosequentia:wooden_crook', item => { item.maxDamage = 64 })
-    event.modify('exnihilosequentia:iron_crook', item => { item.maxDamage = 1024 })
-    event.modify('exnihilosequentia:stone_hammer', item => { item.maxDamage = 128 })
-    event.modify('exnihilosequentia:iron_hammer', item => { item.maxDamage = 2048 })
+    event.modify('exnihilosequentia:wooden_crook',   item => { item.maxDamage = 64 })
+    event.modify('exnihilosequentia:iron_crook',     item => { item.maxDamage = 1024 })
+    event.modify('exnihilosequentia:stone_hammer',   item => { item.maxDamage = 128 })
+    event.modify('exnihilosequentia:iron_hammer',    item => { item.maxDamage = 2048 })
     event.modify('immersiveengineering:screwdriver', item => { item.maxDamage = 16 })
 
     // Rarity changes
     event.modify('immersiveengineering:alu_post', item => { item.rarity = 'uncommon' })
-    event.modify('create:metal_girder', item => { item.rarity = 'uncommon' })
+    event.modify('create:metal_girder',           item => { item.rarity = 'uncommon' })
 
     // Furnace fuel changes
-    event.modify('minecraft:lava_bucket', item => { item.burnTime = 0 })
+    event.modify('minecraft:lava_bucket',   item => { item.burnTime = 0 })
+    event.modify('tfc:ore/lignite',         item => { item.burnTime = 1600 })
+    event.modify('tfc:ore/bituminous_coal', item => { item.burnTime = 1800 })
 
     // Various food tweaks
-    event.modify('minecraft:golden_carrot', item => { item.foodProperties = food => { food.alwaysEdible() } })
+    event.modify('minecraft:golden_carrot',       item => { item.foodProperties = food => { food.alwaysEdible() } })
     event.modify('untamedwilds:food_turtle_soup', item => { item.maxStackSize = 32 })
 
     // Fix glass bottle / wooden bowl dupe
