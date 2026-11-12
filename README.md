@@ -18,6 +18,7 @@ If something goes wrong, please feel free to reach out to me (Air) and ask for h
 • Added lategame Mekanism processing for all metal types. This was previously only available to specific metals!  
 • Nutritional Paste now works with TFC's hunger system. You can now mostly forgo eating normal food in lategame now!  
 • Falling blocks (like dirt or gravel or cobble) will no longer destroy Mekanism and PNC machinery when falling on top of them  
+• Fixed making Compressed Iron Ingots with explosions having lower success rate than what is displayed  
 • Lots of small improvements and tons of small fixes, as per usual  
 
 ---
@@ -41,6 +42,7 @@ Full changelogs:
 
 ### Quality of Life
 • Made all PNC and Mekanism blocks resistant to falling blocks  
+• Made a custom implementation for Explosion Crafting to combat a bug in base PNC where output rates are rounded down and otherwise wrong  
 • Players no longer randomly emit pollution after eating food  
 • Made pollution pass through more non-solid blocks than just trapdoors (search `$pollution_passthrough` in JEI!)  
 • Made metal Powder and Pellets melt a little faster, so that they do not have the same melting speed as Briquettes. They are still the best, but now melting Powder or Pellets is not as punishing  
@@ -50,14 +52,16 @@ Full changelogs:
 • Made it possible to reignite Dead Torches with a Permanent Torch in hand (previously you had to specifically hold a non-permanent TFC Torch)  
 • Made it possible to ignite Dead Torches by right-clicking a fueled Blaze Burner with them in hand  
 • Made Liquid Blaze Burners a valid heat source for PNC machines. Previously, only the non-liquid variant was valid  
+• Lowered required temperature for some TFC pot recipes from like 500C to 100C, making them work with Peat and making them trigger earlier
 
 ### Balancing
+• Made the Cake recipe also accept Cherries alongside Cranberries  
 • Added TC and/or TFC melting recipes for some vanilla tools and armor that had none previously, as well as for Compressed Iron Armor  
+• Made the extra Redstone Torch recipes that were intended for lategame produce a lot more torches  
 • Added recipes for TC Slime Vines for building/decoration purposes  
 • Removed a Jute Fiber recipe that used Flax  
 • Disabled FD's Pumpkin Slices and replaced all recipe usages with TFC's Pumpkin Chunks  
 • Made Manure compostable  
-• Made the Cake recipe also accept Cherries alongside Cranberries  
 • Changed recipe for Hose Nozzles to require anvil work  
 • Made the Supplementaries Soap recipe accept more blubber  
 • Added vanilla fuel values to lignite and bituminous coal, making it possible to burn them in a TC solid fuel heater  
