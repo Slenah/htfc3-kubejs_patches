@@ -28,6 +28,9 @@ onEvent('block.right_click', event => {
                 event.block.set(event.block.id, { 'bites': `${bites}` })
             }
         }
+        else {
+            event.player.setStatusMessage('You need a knife to grab a slice!')
+        }
     }
 
     // Allow lighting torches from blaze burners

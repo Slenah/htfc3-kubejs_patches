@@ -202,6 +202,7 @@ onEvent('tags.blocks', event => {
     ])
 
     event.add('adpother:pollution_passthrough', [
+        '#create:fan_transparent',
         '#minecraft:carpets',
         '#minecraft:trapdoors',
         '#forge:thatch',
@@ -392,10 +393,6 @@ onEvent('tags.items', event => {
         '#forge:ingots/compressed_iron'
     ])
 
-    event.add('hardrock:dont_despawn', [
-        '#forge:ingots/compressed_iron'
-    ])
-    
     event.add('immersiveengineering:forbidden_in_crates', [
         '#functionalstorage:drawer',
         'toolbelt:belt'
@@ -1258,7 +1255,7 @@ onEvent('tags.items', event => {
     //event.add('forge:saw_blade', 'immersiveengineering:sawblade')
     event.add('forge:press_head', 'kubejs:press_head')
     event.add('tfc:compost_browns_low', ['tfc:straw', 'mekanism:bio_fuel'])
-    event.add('tfc:compost_browns-high', ['kubejs:misc_mats/ceramic_shards'])
+    event.add('tfc:compost_browns_high', ['kubejs:misc_mats/ceramic_shards'])
     event.add('tfc:compost_greens_low', ['kubejs:seed_biomass'])
     event.add('tfc:compost_greens', ['createaddition:biomass'])
     event.add('forge:barrels', '#tfcbarrels:barrels')
