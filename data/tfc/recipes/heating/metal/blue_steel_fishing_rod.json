@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "type": "tfc:heating",
   "ingredient": {
     "item": "tfc:metal/fishing_rod/blue_steel"

@@ -1,5 +1,4 @@
 {
-  "__comment__": "This file was automatically created by mcresources",
   "type": "minecraft:crafting_shaped",
   "pattern": [
     "X ",
@@ -14,6 +13,7 @@
     }
   },
   "result": {
-    "item": "minecraft:flint_and_steel", "nbt":"{Damage:2600}"
+    "item": "minecraft:flint_and_steel",
+    "nbt": "{Damage:2600}"
   }
 }

@@ -1,18 +1,18 @@
 {
-	"type": "farmersdelight:cutting",
-	"ingredients": [
-	{
-		"item": "tfc:fire_clay_block"
-	}
-	],
-	"tool": {
-		"type": "farmersdelight:tool_action",
-		"action": "shovel_dig"
-	},
-	"result": [
-	{
-		"item": "tfc:fire_clay",
-		"count": 4
-	}
-	]
+  "type": "farmersdelight:cutting",
+  "ingredients": [
+    {
+      "item": "tfc:fire_clay_block"
+    }
+  ],
+  "tool": {
+    "type": "farmersdelight:tool_action",
+    "action": "shovel_dig"
+  },
+  "result": [
+    {
+      "item": "tfc:fire_clay",
+      "count": 4
+    }
+  ]
 }

@@ -1,0 +1,9 @@
+{
+  "ingredient": {
+    "item": "pneumaticcraft:sourdough_bread"
+  },
+  "hunger": 6,
+  "saturation": 1,
+  "decay_modifier": 1.25,
+  "grain": 2
+}

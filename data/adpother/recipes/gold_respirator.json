@@ -1,40 +1,45 @@
 {
-	"type": "minecraft:crafting_shaped",
-	"pattern": [
-		"BHB",
-		"LGL",
-		"WVW"
-	],
-	"key": {
-		"G": [
-			{
-				"item": "tfc:metal/tuyere/bronze"
-			},
-			{
-				"item": "tfc:metal/tuyere/black_bronze"
-			},
-			{
-				"item": "tfc:metal/tuyere/bismuth_bronze"
-			}
-		],
-		"L": {
-			"tag": "forge:leather"
-		},
-		"V": {
-			"tag": "minecraft:leaves"
-		},
-		"W": {
-			"tag": "minecraft:wool"
-		},
-		"H": {
-			"item": "minecraft:leather_helmet"
-		},
-		"B": [
-			{"item": "kubejs:primitive_glass_pane"},
-			{"item": "tconstruct:clear_glass_pane"}]
-	},
-	"result": {
-		"item": "adpother:gold_respirator",
-		"count": 1
-	}
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "BHB",
+    "LGL",
+    "WVW"
+  ],
+  "key": {
+    "G": [
+      {
+        "item": "tfc:metal/tuyere/bronze"
+      },
+      {
+        "item": "tfc:metal/tuyere/black_bronze"
+      },
+      {
+        "item": "tfc:metal/tuyere/bismuth_bronze"
+      }
+    ],
+    "L": {
+      "tag": "forge:leather"
+    },
+    "V": {
+      "tag": "minecraft:leaves"
+    },
+    "W": {
+      "tag": "minecraft:wool"
+    },
+    "H": {
+      "item": "minecraft:leather_helmet"
+    },
+    "B": [
+      {
+        "item": "kubejs:primitive_glass_pane"
+      },
+      {
+        "item": "tconstruct:clear_glass_pane"
+      }
+    ]
+  },
+  "result": {
+    "item": "adpother:gold_respirator",
+    "count": 1
+  }
 }

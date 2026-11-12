@@ -1,1 +1,23 @@
-{"type":"minecraft:crafting_shaped","group":"exnihilosequentia","pattern":["c c","clc","s s"],"key":{"c":{"tag":"minecraft:logs"},"l":{"tag":"minecraft:wooden_slabs"},"s":{"tag":"forge:rods/wooden"}},"result":{"item":"exnihilosequentia:oak_crucible"}}
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "exnihilosequentia",
+  "pattern": [
+    "c c",
+    "clc",
+    "s s"
+  ],
+  "key": {
+    "c": {
+      "tag": "minecraft:logs"
+    },
+    "l": {
+      "tag": "minecraft:wooden_slabs"
+    },
+    "s": {
+      "tag": "forge:rods/wooden"
+    }
+  },
+  "result": {
+    "item": "exnihilosequentia:oak_crucible"
+  }
+}

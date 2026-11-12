@@ -1,8 +1,7 @@
 {
-    "__comment__": "This file was automatically created by HTFC",
-    "conditions": [
-      {
-        "type": "forge:false"
-      }
-    ]
-  }
+  "conditions": [
+    {
+      "type": "forge:false"
+    }
+  ]
+}

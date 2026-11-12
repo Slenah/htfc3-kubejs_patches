@@ -22,7 +22,7 @@
     "amount": 1000
   },
   "duration": 2000,
-  "temperature": 600,
+  "temperature": 400,
   "fluid_output": {
     "fluid": "tfc:lye",
     "amount": 1000

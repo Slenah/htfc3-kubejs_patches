@@ -1,22 +1,23 @@
 // Inactive, left as a learning resource or for deep modpack customization.
-// To make changes, start by setting this to false:
-let scriptDisabled = true
+// To make changes, start by setting this to `true`:
+const scriptEnabled = false
 
 // This is the script that was used to generate the '#kjs:metallic' item tag.
-// It works by starting off of a base (which is contained within the 'tags.items' event hook below),
+// It works by starting off of a base (which is contained within the `tags.items` event hook below),
 // which is then grown based on the recipe usages of those items.
 
-// The generated part of the tag is stored in 'kubejs/data/kjs/tags/items/metallic.json'.
+// The generated part of the tag is stored in `kubejs/data/kjs/tags/items/metallic.json`.
 // The blacklist takes priority over the generated data.
 
 // You can make changes to the tags event right below these comments,
 // which lets you add in your own items and blacklist anything unwanted.
-// If removing existing strings from 'event.add',
-// you should probably delete the 'metallic.json' file to clean the old cache.
+// If removing existing strings from `event.add`,
+// you should probably delete the `metallic.json` file to clean the old cache.
 
 // The script obtains recipe from the server export file due to the limitations
-// of kubejs' forEachRecipe() call. It is located in 'kubejs/exported/kubejs-server-export.json'.
-// Delete it and run '/kubejs export' to refresh the recipe cache.
+// of KubeJS's `forEachRecipe()` call. It is located in `kubejs/exported/kubejs-server-export.json`.
+// Delete it and run `/kubejs export` to refresh the recipe cache.
+
 
 
 onEvent('tags.items', event => {
@@ -32,7 +33,9 @@ onEvent('tags.items', event => {
     ])
     event.remove('kjs:metallic', itemBlacklist)
 })
-let itemBlacklist = [
+const maxLoops = 5 // amount of times to propagate the list above
+
+const itemBlacklist = [
     /^.+:plant\/.+/,
     /^minecraft:.+dye$/,
     /fishing_rod/,
@@ -72,7 +75,7 @@ let itemBlacklist = [
     'mob_grinding_utils:solid_xp_baby',
     'doggytalents:super_treat',
 ]
-let propagationItemBlacklist = [
+const propagationItemBlacklist = [
     'htm:hatchet',
     'create:super_glue',
     'functionalstorage:framed_1',
@@ -81,7 +84,7 @@ let propagationItemBlacklist = [
     'minecraft:tripwire_hook',
     'create:ornate_iron_window_pane',
 ]
-let propagationTagBlacklist = [
+const propagationTagBlacklist = [
     'tfc:axes',
     'bookshelf:axes',
     'forge:axes',
@@ -96,7 +99,7 @@ let propagationTagBlacklist = [
     'tfc:chisels',
     'tfc:knives',
 ]
-let recipeTypeBlacklist = new Set([ // general recipe type blacklits
+const recipeTypeBlacklist = new Set([ // general recipe type blacklits
     'tfc:damage_inputs_shaped_crafting',
     'tfc:damage_inputs_shapeless_crafting',
     'createoreexcavation:drilling',
@@ -116,10 +119,10 @@ let recipeTypeBlacklist = new Set([ // general recipe type blacklits
 
 
 
-let jsonOutputPath = 'kubejs/data/kjs/tags/items/metallic.json'
+const jsonOutputPath = 'kubejs/data/kjs/tags/items/metallic.json'
 
 onEvent('server.datapack.first', event => {
-    if (scriptDisabled) return
+    if (!scriptEnabled) return
     if (!JsonIO.read(jsonOutputPath) && JsonIO.read('kubejs/exported/kubejs-server-export.json')) {
         event.getServer().tell(Text.of("[KubeJS] Initializing script for metallic item tag generation.").red())
         event.getServer().tell(Text.of("[KubeJS] Resource loading will take significantly longer than usual.").gold())
@@ -130,7 +133,7 @@ onEvent('server.datapack.first', event => {
 })
 
 onEvent('recipes', event => {
-    if (scriptDisabled) return
+    if (!scriptEnabled) return
     if (JsonIO.read(jsonOutputPath) != null) return
     let metallicItemsQueue = new Set()
     let lastSize = -1
@@ -264,7 +267,6 @@ onEvent('recipes', event => {
         newItems.forEach(item => metallicItemsQueue.add(item))
         console.log(`Metallic tag: Propogated with ${newItems.size} new metallic items (loops left: ${maxLoops})`)
     }
-    let maxLoops = 5
     console.log(`Metallic tag: Growing based on recipe usages (loops left: ${maxLoops})`)
     while (maxLoops > 0 && metallicItemsQueue.size !== lastSize) {
         maxLoops--

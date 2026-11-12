@@ -8,20 +8,22 @@
         {
           "type": "minecraft:item",
           "name": "tfc:food/tropical_fish",
-          "functions": [{
-            "function": "set_count",
-            "count": {
-              "min": 1,
-              "max": 4
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 1,
+                "max": 4
+              }
+            },
+            {
+              "function": "looting_enchant",
+              "count": {
+                "min": 1,
+                "max": 2
+              }
             }
-          },
-          {
-            "function": "looting_enchant",
-            "count": {
-              "min": 1,
-              "max": 2
-            }
-          }]
+          ]
         }
       ]
     },
@@ -31,13 +33,15 @@
         {
           "type": "minecraft:item",
           "name": "untamedwilds:chum",
-          "functions": [{
-            "function": "set_count",
-            "count": {
-              "min": 0,
-              "max": 4
+          "functions": [
+            {
+              "function": "set_count",
+              "count": {
+                "min": 0,
+                "max": 4
+              }
             }
-          }]
+          ]
         }
       ]
     }

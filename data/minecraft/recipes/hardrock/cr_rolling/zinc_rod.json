@@ -1,10 +1,10 @@
 {
-	"type":"createaddition:rolling",
-	"input": {
-      	"tag": "forge:ingots/zinc"
-	},
-	"result": {
-		"item": "tfc:metal/rod/zinc",
-		"count": 2
-	}
+  "type": "createaddition:rolling",
+  "input": {
+    "tag": "forge:ingots/zinc"
+  },
+  "result": {
+    "item": "tfc:metal/rod/zinc",
+    "count": 2
+  }
 }

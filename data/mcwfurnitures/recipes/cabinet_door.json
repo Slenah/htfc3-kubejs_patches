@@ -1,38 +1,26 @@
 {
-    "type": "minecraft:crafting_shaped",
-    
-    "pattern":
-    [
-        "LLS",
-        "LCR",
-        "LLS"                
-    ],
-    
-    "key":
-    { 
-        "C":
-        {
-            "tag": "forge:chests/wooden"
-        },
-        "R":
-        {
-            "tag": "forge:rods/iron"
-        },
-        "S":
-        {
-            "item": "minecraft:stick"
-        },
-        "L":
-        {
-            "tag": "tfc:lumber"
-        }
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "LLS",
+    "LCR",
+    "LLS"
+  ],
+  "key": {
+    "C": {
+      "tag": "forge:chests/wooden"
     },
-    
-    "result":
-    {
-        "item":  "mcwfurnitures:cabinet_door",
-        "count": 1
+    "R": {
+      "tag": "forge:rods/iron"
+    },
+    "S": {
+      "item": "minecraft:stick"
+    },
+    "L": {
+      "tag": "tfc:lumber"
     }
+  },
+  "result": {
+    "item": "mcwfurnitures:cabinet_door",
+    "count": 1
+  }
 }
-
-
