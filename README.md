@@ -1,154 +1,78 @@
 # Installation guide
 1. Hit the green 'Code' button in the top right corner of the menu with a bunch of folders
 2. Select 'Download ZIP'
-3. Delete the contents of your instance's/server's kubejs folder
-4. Extract the zip file you just downloaded into the now empty kubejs folder
+3. Delete the contents of your instance's/server's `kubejs` folder
+4. Extract the zip file you just downloaded into the now empty `kubejs` folder
 5. Yay!
 
-If something goes wrong, please feel free to reach out to me (air) and ask for help!
+If something goes wrong, please feel free to reach out to me (Air) and ask for help!
 
 > [!note]
-> **Just to make it clear, this is only for singleplayer or for your private server!**  
-> Some of the changes are clientside, some are serverside and some are both. If you don't have this installed on both the client and the server you will not be able to join :(
-
-# Contributing
-1. Make a github account and fork this repository with the Fork button to create your personal copy that you can freely mess with
-2. Download something that will let you handle the git-related things, [Github Desktop](https://desktop.github.com/download/) is pretty beginner-friendly! I also like VS Code's built-in source control feature. You can use whatever you're comfortable with though!
-3. Delete everything inside of the kubejs folder of your hardrock v3 instance
-4. Download and add the the mods from the installation guide section above to your instance's mods folder
-5. (will be using github desktop for this guide)
-- Open Github Desktop and log into your github account
-- Go to File > Clone Repository. Select your forked repository and **make sure to set the local path to be the kubejs folder of your instance!**
-6. Your repository should now be all set up! You can make changes inside the kubejs folder, then come back to the Github Desktop app to review them.
-- To commit changes to your local repository, select the files from the list of edited files that you wish to commit, then write a commit message and hit the Commit button!
-- **Keep commits small and focused!** Having each commit cover a single thing or feature is a good idea. You can see the history of my commits if you want some sort of example!
-7. Once you wish to submit all of the changes that you've made to me:
-- Go to my repository, then to the Pull requests tab and create a pull request with your repository
-- List the changes you've made, if you have things you're not unsure about you can mention them so I can take a closer look!
-- After you submit the pull request, I will go over your changes to make sure that everything's okay and merge it into the main repository :D
-
-Please feel free to reach out to me on discord for any questions!
+> **Just to make it clear, this is only for singleplayer or for your private server! Not for public servers.**  
+> Some of the changes are clientside, some are serverside, and some are both. If you don't have this installed on both the client and the server you will not be able to join :(
 
 
 
-# Changelogs / differences from 1.6.2
+# Changelogs / differences from 1.6.3
 ### Important changes ("TL;DR")
-• Added gemstone washing! Gems may be worth processing for byproducts in mid- and late-game now. Feedback wanted! <br/>
-• Removed old Create Sifter loot tables for Gravel (those were very strong), replaced them with the sluicing loot tables <br/>
-• ^ Fluorite is no longer farmable with Quartzite Gravel. Please let us know if this wrecks late-game balancing too much! <br/>
-• LPG was bugged to produce colossal amounts of petcoke which is now fixed (Cokers, in turn, received a massive buff) <br/>
-• Made TFC Nutrition less extreme at very low and very high values (feedback wanted!) <br/>
-• Significantly increased gem drop rate for sluicing or sifting colored sand (0.1% -> 0.5%; 1% for yellow and brown sand) <br/>
-• Added Pyrite and Fluorite to the Rare Gems virtual vein for the Create Drilling Machine, removed Ruby due to being less useful <br/>
-• Fixed IE and Firmalife ores being unusually soft (they now take the same time to break as raw stone, same as all TFC ores) <br/>
-• Increased processing speed of IE Crushers (dropping items in without a chute may not be fast enough for input now!) <br/>
-• Digital Miners can now survive blocks falling on top of it <br/>
-• Changed the Rock Chunks recipes that use the Create Mechanical Press to only require one action instead of four <br/>
-• Increased outputs from washing Andesite Rock Powder <br/>
-• Made Rubberwood Logs have a chance to not drop when broken (feedback wanted!) <br/>
-• Reduced the amount of Rubberwood Planks you get from each log <br/>
-• Removed Cocoa Beans from the sand sieving loot tables, added some other things to take their place <br/>
+• Added lategame Mekanism processing for all metal types. This was previously only available to specific metals!  
+• Nutritional Paste now works with TFC's hunger system. You can now mostly forgo eating normal food in lategame now!  
+• Falling blocks (like dirt or gravel or cobble) will no longer destroy Mekanism and PNC machinery when falling on top of them  
+• Lots of small improvements and tons of small fixes, as per usual  
 
-
-
+---
+Full changelogs:
 ### New things
-• Added the Dust Mop <br/>
-• Added clean Gemstone Dust, along with their washing recipes <br/>
-• Added lots of extra Torch and Redstone Torch recipes <br/>
-• Added recipes for Barrel Cacti, Firmaciv Thatch Roofing and Cloud Blocks <br/>
-• Added crushing recipes TFC ore blocks <br/>
-• Added Create Mixer recipes for dye fluids <br/>
-• Added bulk recipes for Rods and Wires for the IE Metal Press <br/>
-• Added red steel heads for the IE press :p <br/>
+• Added Mekanism processing to TFC-specific metal types  
+• Re-introduced Nutritional Paste  
+• Added Molten Fire Clay, letting you recycle fire clay items with TC smelting  
+• Made lots of TFC fruits and vegetables work as ammo for Create's Potato Cannon  
+• Added recipes for vanilla Chainmail Armor  
+• Added a Wrought Iron Spindle, a more durable version of the normal ceramic Spindle  
+• Added Liquid Smoke, a midgame alternative to smoking foods over a Firepit  
 
 ### Documentation / Meta
-• Added an optional disabled-by-default resource pack that replaces the Body Hygiene dirtiness meter with precise numeric values <br/>
-• Added tooltips to Nightshade and Stinky Soup mentioning their toxicity <br/>
-• Added informational tooltips for End Portal Frames and End Cakes, as well as some other items <br/>
-• Introduces unique names to different mesh kinds to make it easier to tell which is which <br/>
-• Made it impossible to place a String Mesh onto Create Sifters to help prevent confusion <br/>
-• Added a bit of information regarding silkworm spread to Silkworm-related items and blocks <br/>
-• Added JEI info for the Coker structure explaining how to collect its outputs <br/>
-• Added JEI info for Coral Blocks explaining exact spawning requirements <br/>
-• Disabled all recipes related to Nutritional Paste and added information explaining that it's broken <br/>
-• Tweaked a bunch of various tooltips <br/>
-• Hidden the instant barrel cooling recipes to reduce clutter <br/>
-• Hidden a bunch of unobtainable fluids <br/>
-• Changed map color of Terror Birds to orange (from white) <br/>
+• Various bug fixes for the Quests tab  
+• Added JEI info pages for Bloomeries and Blast Furnaces containing additional info and tips  
+• Removed JEI entries for TC's potion buckets  
+• Reorganized tags for blocks that tornadoes can pull through. You can now search `$tornado_grab` in JEI to get a full list! Previously that would only display some of the blocks that are affected by tornadoes  
+• Changed the default TFC Client configs to display the health bar as TFC health instead of vanilla hearts. This means that nutrition's effects (average nutrients and not unique foods) will be displayed!  
+• Renamed the vanilla Loom to "Banner Loom" to reduce ambiguity with TFC looms  
 
 ### Quality of Life
-• Made some Clay recipes accept colored TFC sands, as opposed to being limited to vanilla sand <br/>
-• Made oven appliances such as cooking pots and kettles count as oven insulation <br/>
-• Added Mekanism recipes for making Andesite Alloy and for turning Loose Rocks into bricks <br/>
-• Added more advanced recipes for making Gypsum/Alabaster <br/>
-• Made smashing ores into Rocky Chunks with a Mechanical Press require only one action, down from four <br/>
-• Made the Rod into Nugget sequenced recipes take four actions instead of five <br/>
-• Added automation recipes for Whisks and Mechanical Press Heads <br/>
-• Added Crude Hammer recipes for breaking down coal blocks <br/>
-• Added Mechanical Press recipes for some Crude Hammer recipes (like breaking down overworld Quartz crystal blocks!) <br/>
-• Added an IE Sawmill recipe for Empty Spools <br/>
-• Made the Cut Cattail recipe accept Taro Roots <br/>
-• Made Press Heads not as heavy <br/>
-• Added Mechanical Press recipe for making pumpkin chunks <br/>
+• Made all PNC and Mekanism blocks resistant to falling blocks  
+• Players no longer randomly emit pollution after eating food  
+• Made pollution pass through more non-solid blocks than just trapdoors (search `$pollution_passthrough` in JEI!)  
+• Made metal Powder and Pellets melt a little faster, so that they do not have the same melting speed as Briquettes. They are still the best, but now melting Powder or Pellets is not as punishing  
+• Made all recipes that want only Glue or only Slime Balls accept either of the two  
+• Tweaked the Grout mixer recipe to not consume excessive amounts of basalt gravel. Now, instead of needing any gravel and basalt gravel, it needs any non-basalt gravel and basalt gravel  
+• Added IE Crusher recipes to make Flux from blocks of Cobblestone  
+• Made it possible to reignite Dead Torches with a Permanent Torch in hand (previously you had to specifically hold a non-permanent TFC Torch)  
+• Made it possible to ignite Dead Torches by right-clicking a fueled Blaze Burner with them in hand  
+• Made Liquid Blaze Burners a valid heat source for PNC machines. Previously, only the non-liquid variant was valid  
 
 ### Balancing
-• Changed nutrition health multipliers from [0.2; 3.0] to [0.3; 2.0] <br/>
-• Swapped petcoke output rates for LPG processing and Bitumen processing <br/>
-• Made the Create Sifter gravel loot tables match the sluicing ones, essentially nerfing them really hard <br/>
-• Removed Tiny Coal from gravel sieving loot tables <br/>
-• Sifting/sluicing colored sand is now much more likely to give gems <br/>
-• Overhauled the sand sifting loot tables <br/>
-• Made Osmium virtual veins for the Create Drilling Machine require a netherite drill <br/>
-• Increased processing speed of IE Crushers <br/>
-• Increased outputs from washing Andesite Rock Powder <br/>
-• Dropped the output rate for the Unfired Brick deployer recipes from 100% to 70% (still more efficient than knapping by hand), added IE metal press (and Mekanism) recipes with 100% output rate to take their place <br/>
-• Primitive Glass can no longer be dyed into placeable glass panes <br/>
-• Made the Compass and Climate Station recipes accept Primitive Glass <br/>
-• Redstone Lamps and some related items are now much cheaper to make <br/>
-• Tweaked recipes for Beehives, Clipboards, Crude Hammers, Sentry Turrets, Andesite Exoskeletons, Powered Lanterns, Garlic Bread, Asphalt and IE Concrete <br/>
-• Rubberwood Logs now have a 50% chance to not drop as an item when broken <br/>
-• Decreased output of all Rubberwood Planks recipes <br/>
-• Swapped out some of the gems that the Rare Gems ore vein has to more useful ones <br/>
-• Bladders are no longer a guaranteed drop from lots of animals, and instead follow the drop chances written in the TFC guidebook. The exceptions are Hippos and Bisons, which retained a 100% drop chance. <br/>
-• Micromissiles found in loot chests now only have 5 shots instead of 100 <br/>
-• Micromissiles and Tool Boxes are now more expensive to make <br/>
-• LPG can now be used as Blaze Burner fuel <br/>
-• Making plastic from Ethylene and Propylene now gives slightly more bitumen <br/>
-• Sprinklers and TC Plate Armor can now be made from any colored steel, instead of specifically requiring red or blue <br/>
-• Canvas is now crafted from Jute Fibers instead of Straw <br/>
-• Changed recipes for Books <br/>
-• Backpacks are now considered very heavy items <br/>
+• Added TC and/or TFC melting recipes for some vanilla tools and armor that had none previously, as well as for Compressed Iron Armor  
+• Added recipes for TC Slime Vines for building/decoration purposes  
+• Removed a Jute Fiber recipe that used Flax  
+• Disabled FD's Pumpkin Slices and replaced all recipe usages with TFC's Pumpkin Chunks  
+• Made Manure compostable  
+• Made the Cake recipe also accept Cherries alongside Cranberries  
+• Changed recipe for Hose Nozzles to require anvil work  
+• Made the Supplementaries Soap recipe accept more blubber  
 
 ### Fixes
-• Fixed block hardness for IE and Firmalife TFC ores <br/>
-• Digital Miners and Waystones can no longer be destroyed by falling blocks (just discovered that this is something we can control, please suggest any other blocks that you think should get collapse protection) <br/>
-• Fixed the respirator and vacuum bag filter application recipes crashing the game <br/>
-• Fixed KubeJS items sometimes having broken black-and-purple sprites or models <br/>
-• Fixed "Cup of Iced Tea" showing up instead of "Air" in empty tanks <br/>
-• Fixed bowled and bottled Farmer's Delight food items creating duplicate bowl/bottle items when put into the crafting grid <br/>
-• Fixed recipe conflicts for Propellers and Iron Sheets, Peculiar Bells and Brass Sheetmetal, as well as for Copycat Layers, Bytes and Slices <br/>
-• Fixed the Iron Bloom sequenced recipe going straight into the Iron Hoe recipe <br/>
-• Tweaked coffee-related recipes and item names <br/>
-• Corrected weird TC smelting values for Quartz-Enriched Iron <br/>
-• Removed overlapping recipes for Sulfur (for some reason you were able to get powder directly from ore with some machines) <br/>
-• Removed some unobtainable meat types from JEI <br/>
-• Fixed Reinforced Stone being a valid crafting ingredient for making itself, resulting in wasting meshes <br/>
-• Fixed TC Mattocks not having the #tfc:axes tag <br/>
-• Fixed broken text when attempting to knap rotten Pumpkins <br/>
-• Fixed Cheese Wheel recipes accepting rotten curds <br/>
-• Fixed anvil move order for Wrought Iron and Cast Iron Grills, as well as Chains <br/>
-• Fixed Vinegar recipe not accepting aged alcohols <br/>
-• Fixed backpacks being storable in Small Vessels <br/>
-• Fixed TF Venison and Meef not being obtainable <br/>
-• Made it impossible for zombie villagers to spawn <br/>
-• Made End Portal Frames not drop when broken within the End dimension <br/>
-• Fixed Sugar Cubes not having an uncrafting recipe <br/>
-• Fixed Fluorite Blocks not being craftable <br/>
-• Fixed a Fluid Drawer exploit <br/>
-• Fixed an exploit with Toolboxes <br/>
-• Fixed Pumpkin Pies and Cooked Pies not returning a Pie Pan when eaten <br/>
-• Removed a weird mutton cutting recipe <br/>
-• Removed odd Latex Bucket recipe involving supports <br/>
-• Removed duplicate (or very similar) recipes for TNT, End Crystals, Redstone Repeaters and Redstone Comparators <br/>
-• Removed recipes for Homestead Jars due to the rendering issues they cause <br/>
-• Disabled the recipe for Vanilla Cat spawn eggs, they will be re-introduced in a later update <br/>
+• Fixed applying respirator filters via crafting table causing a crash  
+• Fixed recipes for repairing Water Flasks being a shaped recipe instead of a shapeless one  
+• Fixed cutting up poultry occasionally giving half-decayed or rotten food  
+• Fixed some sluicing recipes for processing Crushed Gemstones not working correctly and resulting in item loss  
+• Made item despawn protection for sluices more reliable: closing and re-opening the world in singleplayer (or the server restarting in multiplayer) no longer removes protection from dropped items. Just as a reminder, items that can be sluiced and that are on top of a sluice never despawn! Sluicing outputs still despawn, and need something like a hopper.  
+• Made the Chicken Feeds from Mob Grinding Utils work with TFC chickens  
+• Removed a wild Empty Bullet Casing recipe that accidentally made its way into the modpack  
+• Fixed sequenced recipes for metal AdChimneys blocks, RS processors  
+• Fixed some TC tool parts melting into more metal than what they are made from  
+• Fixed some IE sawmill recipes giving more lumber than intended  
+• Fixed some recipes allowing rotten ingredients  
+• Fixed Supplementaries' Ash not being a valid alternative to TFC's Wood Ash  
+• Made various cakes not eatable directly, instead having you cut a slice off, to kind of combat block food not restoring any hunger  
+• Disabled duplicate Bamboo-related blocks from Macaw's TFC AIO  
