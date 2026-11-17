@@ -1,0 +1,23 @@
+{
+  "type": "immersiveengineering:arc_furnace",
+  "input": [
+    {
+      "tag": "forge:ingots/cast_iron"
+    }
+  ],
+  "additives": [
+    {
+      "tag": "minecraft:coals"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:raw_iron_bloom"
+    }
+  ],
+  "slag": {
+    "tag": "forge:slag"
+  },
+  "time": 400,
+  "energy": 102400
+}

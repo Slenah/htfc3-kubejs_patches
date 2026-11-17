@@ -1,0 +1,29 @@
+{
+  "type": "immersiveengineering:arc_furnace",
+  "input": [
+    {
+      "tag": "forge:ingots/cast_iron"
+    }
+  ],
+  "additives": [
+    {
+      "base_ingredient": {
+        "tag": "tfc:flux"
+      },
+      "count": 4
+    },
+    {
+      "tag": "minecraft:coals"
+    }
+  ],
+  "results": [
+    {
+      "item": "tfc:metal/ingot/pig_iron"
+    }
+  ],
+  "slag": {
+    "tag": "forge:slag"
+  },
+  "time": 400,
+  "energy": 102400
+}

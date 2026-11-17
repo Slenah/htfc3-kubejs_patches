@@ -1,0 +1,26 @@
+{
+  "type": "immersiveengineering:arc_furnace",
+  "input": [
+    {
+      "item": "twilightforest:liveroot"
+    }
+  ],
+  "additives": [
+    {
+      "tag": "forge:ingots/irons"
+    },
+    {
+      "tag": "forge:nuggets/gold"
+    }
+  ],
+  "results": [
+    {
+      "tag": "forge:ingots/ironwood"
+    }
+  ],
+  "slag": {
+    "tag": "forge:slag"
+  },
+  "time": 400,
+  "energy": 204800
+}

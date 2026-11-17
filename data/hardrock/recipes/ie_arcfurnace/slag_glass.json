@@ -1,0 +1,16 @@
+{
+  "type": "immersiveengineering:arc_furnace",
+  "input": [
+    {
+      "tag": "forge:slag"
+    }
+  ],
+  "additives": [],
+  "results": [
+    {
+      "item": "immersiveengineering:slag_glass"
+    }
+  ],
+  "time": 400,
+  "energy": 25600
+}

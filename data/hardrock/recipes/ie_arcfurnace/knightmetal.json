@@ -1,0 +1,21 @@
+{
+  "type": "immersiveengineering:arc_furnace",
+  "input": {
+    "tag": "forge:ores/knightmetal"
+  },
+  "additives": [
+    {
+      "tag": "forge:nuggets/gold"
+    }
+  ],
+  "results": [
+    {
+      "tag": "forge:ingots/knightmetal"
+    }
+  ],
+  "slag": {
+    "tag": "forge:slag"
+  },
+  "time": 400,
+  "energy": 204800
+}
