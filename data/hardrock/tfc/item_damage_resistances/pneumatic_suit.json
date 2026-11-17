@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "pneumaticcraft:pneumatic_chestplate"
+    },
+    {
+      "item": "pneumaticcraft:pneumatic_leggings"
+    },
+    {
+      "item": "pneumaticcraft:pneumatic_boots"
+    },
+    {
+      "item": "pneumaticcraft:pneumatic_helmet"
+    }
+  ],
+  "piercing": 20,
+  "slashing": 20,
+  "crushing": 20
+}

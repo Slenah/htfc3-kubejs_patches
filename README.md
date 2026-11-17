@@ -46,15 +46,18 @@ Full changelogs:
 • Players no longer randomly emit pollution after eating food  
 • Made pollution pass through more non-solid blocks than just trapdoors (search `$pollution_passthrough` in JEI!)  
 • Made metal Powder and Pellets melt a little faster, so that they do not have the same melting speed as Briquettes. They are still the best, but now melting Powder or Pellets is not as punishing  
+• Added additional TFC alloying recipes for some complex metals to help reduce conflicts (like making Black Bronze accept Electrum instead of specifically Gold and Silver)  
 • Made all recipes that want only Glue or only Slime Balls accept either of the two  
 • Tweaked the Grout mixer recipe to not consume excessive amounts of basalt gravel. Now, instead of needing any gravel and basalt gravel, it needs any non-basalt gravel and basalt gravel  
 • Added IE Crusher recipes to make Flux from blocks of Cobblestone  
 • Made it possible to reignite Dead Torches with a Permanent Torch in hand (previously you had to specifically hold a non-permanent TFC Torch)  
 • Made it possible to ignite Dead Torches by right-clicking a fueled Blaze Burner with them in hand  
 • Made Liquid Blaze Burners a valid heat source for PNC machines. Previously, only the non-liquid variant was valid  
-• Lowered required temperature for some TFC pot water boiling recipes from like 500C to 100C, making them work with Peat and making them trigger earlier
+• Lowered required temperature for some TFC pot water boiling recipes from like 500C to 100C, making them work with Peat and making them trigger earlier  
+• Added TFC armor resistance values to the Pneumatic Suit and the Mekasuit  
 
 ### Balancing
+• Added an extra Arc Furnace recipe for wrought iron. You can now make raw blooms from charcoal, if you can't use coke coal to make wrought iron ingots directly!  
 • Made the Cake recipe also accept Cherries alongside Cranberries  
 • Added TC and/or TFC melting recipes for some vanilla tools and armor that had none previously, as well as for Compressed Iron Armor  
 • Made the extra Redstone Torch recipes that were intended for lategame produce a lot more torches  
@@ -70,7 +73,7 @@ Full changelogs:
 • Fixed applying respirator filters via crafting table causing a crash  
 • Fixed recipes for repairing Water Flasks being a shaped recipe instead of a shapeless one  
 • Fixed cutting up poultry occasionally giving half-decayed or rotten food  
-• Fixed some sluicing recipes for processing Crushed Gemstones not working correctly and resulting in item loss  
+• Fixed some sluicing recipes for Crushed Gemstones missing output items  
 • Made item despawn protection for sluices more reliable: closing and re-opening the world in singleplayer (or the server restarting in multiplayer) no longer removes protection from dropped items. Just as a reminder, items that can be sluiced and that are on top of a sluice never despawn! Sluicing outputs still despawn, and need something like a hopper.  
 • Made the Chicken Feeds from Mob Grinding Utils work with TFC chickens  
 • Removed a wild Empty Bullet Casing recipe that accidentally made its way into the modpack  

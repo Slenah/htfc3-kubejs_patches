@@ -1,0 +1,19 @@
+{
+  "ingredient": [
+    {
+      "item": "mekanism:mekasuit_bodyarmor"
+    },
+    {
+      "item": "mekanism:mekasuit_pants"
+    },
+    {
+      "item": "mekanism:mekasuit_boots"
+    },
+    {
+      "item": "mekanism:mekasuit_helmet"
+    }
+  ],
+  "piercing": 30,
+  "slashing": 30,
+  "crushing": 30
+}
