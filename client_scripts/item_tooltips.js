@@ -1389,10 +1389,6 @@ function convertNumber(num) {
             text.add(6, Text.gold('to unlock the full inventory.'))
         }
     })
-    tooltip.addAdvanced(['immersivepetroleum:seismic_survey', 'immersivepetroleum:survey_result'], (item, advanced, text) => {
-        text.add(1, Text.gold('Warning: Viewing survey results'))
-        text.add(2, Text.gold('sometimes causes the game to crash.'))
-    })
     tooltip.addAdvanced(['immersivepetroleum:projector', 'immersiveengineering:windmill', 'immersiveengineering:watermill'], (item, advanced, text) => {
         text.add(1, Text.gold('Known to have shader compatibility issues'))
     })
@@ -1405,12 +1401,12 @@ function convertNumber(num) {
     })
     tooltip.addAdvanced('immersivepetroleum:seismic_survey', (item, advanced, text) => {
         if (!tooltip.shift) {
-            text.add(3, Text.gold(''))
-            text.add(4, [Text.gold('Hold '), Text.yellow('Shift '), Text.gold('for more info')])
+            text.add(1, Text.gold(''))
+            text.add(2, [Text.gold('Hold '), Text.yellow('Shift '), Text.gold('for more info')])
         } else {
-            text.add(3, Text.gold(''))
-            text.add(4, [Text.gold('Used to locate virtual '), Text.yellow('Crude Oil'), Text.gold(' veins that')])
-            text.add(5, [Text.gold('can be extracted with a '), Text.yellow('Derrick'), Text.gold(' and '), Text.yellow('Pumpjack')])
+            text.add(1, Text.gold(''))
+            text.add(2, [Text.gold('Used to locate virtual '), Text.yellow('Crude Oil'), Text.gold(' veins')])
+            text.add(3, [Text.gold('that can be extracted with a '), Text.yellow('Derrick'), Text.gold(' and '), Text.yellow('Pumpjack')])
         }
     })
     tooltip.addAdvanced('createoreexcavation:vein_finder', (item, advanced, text) => {

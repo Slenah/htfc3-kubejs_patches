@@ -17,6 +17,7 @@ If something goes wrong, please feel free to reach out to me (Air) and ask for h
 ### Important changes ("TL;DR")
 • Fixed Lapis, Diamond and Emerald veins not spawning surface samples
 • Fixed making Compressed Iron Ingots with explosions having lower success rate than what is displayed  
+• Fixed the Survey Results crash  
 • Falling blocks (like dirt or gravel or cobble) will no longer destroy Mekanism and PNC machinery when falling on top of them  
 • Added lategame Mekanism processing for all metal types. This was previously only available to specific metals!  
 • Nutritional Paste now works with TFC's hunger system. You can now mostly forgo eating normal food in lategame now!  
@@ -85,5 +86,6 @@ Full changelogs (each section is roughly ordered by modpack progression):
 • Fixed some TC tool parts melting into more metal than what they are made from  
 • Fixed sequenced recipes for metal AdChimneys blocks, RS processors  
 • Fixed some IE sawmill recipes giving more lumber than intended  
+• Fixed game crashes related to viewing Survey Results from locating crude oil veins  
 • Removed a wild Empty Bullet Casing recipe that accidentally made its way into the modpack  
 • Made the Chicken Feeds from Mob Grinding Utils work with TFC chickens  
