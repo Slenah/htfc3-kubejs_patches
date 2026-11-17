@@ -13,7 +13,7 @@
     "amount": 1000
   },
   "duration": 4000,
-  "temperature": 600,
+  "temperature": 200,
   "fluid_output": {
     "fluid": "kubejs:boiled_water",
     "amount": 1000

@@ -19,7 +19,7 @@
     "amount": 1000
   },
   "duration": 1200,
-  "temperature": 600,
+  "temperature": 200,
   "fluid_output": {
     "fluid": "kubejs:herbal_water",
     "amount": 1000

@@ -10,7 +10,7 @@
     "amount": 1000
   },
   "duration": 2000,
-  "temperature": 600,
+  "temperature": 200,
   "fluid_output": {
     "fluid": "kubejs:purified_water",
     "amount": 1000
