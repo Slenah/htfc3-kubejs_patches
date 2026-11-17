@@ -20,7 +20,8 @@ onEvent('jei.hide.fluids', event => {
         'pneumaticcraft:gasoline',
         'pneumaticcraft:lubricant',
         'pneumaticcraft:ethanol',
-        'immersiveengineering:plantoil'
+        'immersiveengineering:plantoil',
+        'immersivepetroleum:ethylene'
     ]
     fluidsToHide.forEach(fluid => {
         event.hide(fluid)
@@ -35,10 +36,12 @@ onEvent('jei.hide.items', event => {
         /^createoreexcavation:raw_/,
         /^create:crushed_raw_/,
         'create:raw_zinc',
+        /^minecraft:raw_(iron|gold|copper).+/, // raw ores and raw ore storage blocks
         'pneumaticcraft:seismic_sensor',
         'kubejs:clean_amethyst_powder',
         'minecraft:sweet_berries',
         'minecraft:beehive',
+        'immersivepetroleum:ethylene_bucket',
 
         /^coffee_delight:.+iced/,
         'untamedwilds:food_bear_raw',

@@ -12,6 +12,18 @@ function getKeybind(langKey) {
     return [key, Array.from(keyName)]
 }
 
+function extractItemName(itemId) {
+    const colonIndex = itemId.indexOf(':')
+    if (colonIndex > 0) itemId = itemId.substring(colonIndex)
+    
+    const words = itemId.split('_')
+    let out = ''
+    for (let word of words) {
+        out += word[0].toUpperCase()
+        if (word.length > 1) out += word.slice(1)
+    }
+}
+
 const pollution_filter_map = {
     'dust': {
         'low': ['htm:plant_fabric'],
@@ -28,11 +40,55 @@ const pollution_filter_map = {
         'high': ['minecraft:white_wool', 'minecraft:orange_wool', 'minecraft:magenta_wool', 'minecraft:light_blue_wool', 'minecraft:yellow_wool', 'minecraft:lime_wool', 'minecraft:pink_wool', 'minecraft:gray_wool', 'minecraft:light_gray_wool', 'minecraft:cyan_wool', 'minecraft:purple_wool', 'minecraft:blue_wool', 'minecraft:brown_wool', 'minecraft:green_wool', 'minecraft:red_wool', 'minecraft:black_wool']
     }
 }
-//#minecraft:wool = ['minecraft:white_wool','minecraft:orange_wool','minecraft:magenta_wool','minecraft:light_blue_wool','minecraft:yellow_wool','minecraft:lime_wool','minecraft:pink_wool','minecraft:gray_wool','minecraft:light_gray_wool','minecraft:cyan_wool','minecraft:purple_wool','minecraft:blue_wool','minecraft:brown_wool','minecraft:green_wool','minecraft:red_wool','minecraft:black_wool']
-//#forge:kelp = ['tfc:plant/leafy_kelp','tfc:plant/winged_kelp']
-//#minecraft:leaves = ['minecraft:jungle_leaves','minecraft:oak_leaves','minecraft:spruce_leaves','minecraft:dark_oak_leaves','minecraft:acacia_leaves','minecraft:birch_leaves','minecraft:azalea_leaves','minecraft:flowering_azalea_leaves','tfc:wood/leaves/acacia','tfc:wood/leaves/ash','tfc:wood/leaves/aspen','tfc:wood/leaves/birch','tfc:wood/leaves/blackwood','tfc:wood/leaves/chestnut','tfc:wood/leaves/douglas_fir','tfc:wood/leaves/hickory','tfc:wood/leaves/kapok','tfc:wood/leaves/maple','tfc:wood/leaves/oak','tfc:wood/leaves/palm','tfc:wood/leaves/pine','tfc:wood/leaves/rosewood','tfc:wood/leaves/sequoia','tfc:wood/leaves/spruce','tfc:wood/leaves/sycamore','tfc:wood/leaves/white_cedar','tfc:wood/leaves/willow','twilightforest:rainbow_oak_leaves','twilightforest:twilight_oak_leaves','twilightforest:canopy_leaves','twilightforest:mangrove_leaves','twilightforest:dark_leaves','twilightforest:time_leaves','twilightforest:transformation_leaves','twilightforest:mining_leaves','twilightforest:sorting_leaves','twilightforest:thorn_leaves','twilightforest:beanstalk_leaves','myrtrees:rubberwood_leaves','tconstruct:earth_slime_leaves','tconstruct:sky_slime_leaves','tconstruct:ender_slime_leaves']
 
 onEvent('item.tooltip', tooltip => {
+    const boilerParts = [
+        ['steampowered:bronze_burner',    'steampowered:bronze_boiler',    'steampowered:bronze_flywheel'],
+        ['steampowered:cast_iron_burner', 'steampowered:cast_iron_boiler', 'steampowered:cast_iron_flywheel'],
+        ['steampowered:steel_burner',     'steampowered:steel_boiler',     'steampowered:steel_flywheel']
+    ]
+
+    boilerParts.forEach(partSet => {
+        partSet.forEach(part => {
+            tooltip.addAdvanced(part, (item, advanced, text) => {
+                text.add(1, Text.red('Not the same as Steam Engines from base Create!'))
+
+                let missing = ['Boiler', 'Burner', 'Engine', 'Flywheel']
+                console.log(part)
+                for (const thingamajig of missing) {
+                    console.log(`${thingamajig.toLowerCase()}: ${part.includes(thingamajig.toLowerCase())}`)
+                    if (part.includes(thingamajig.toLowerCase())) {
+                        missing.splice(missing.indexOf(thingamajig), 1)
+                        console.log(`Spliced: ${missing}`)
+                        break
+                    }
+                }
+                text.add(2, Text.gold(`Also needs a matching ${missing[0]}, ${missing[1]} and ${missing[2]} to function`))
+                text.add(3, ' ')
+            })
+        })
+    })
+
+    const pollution_filter_map = {
+        'dust': {
+            'low': ['htm:plant_fabric'],
+            'medium': ['minecraft:paper', 'tfc:burlap_cloth'],
+            'high': ['tfc:silk_cloth', 'tfc:wool_cloth']
+        },
+        'carbon': {
+            'low': ['minecraft:jungle_leaves', 'minecraft:oak_leaves', 'minecraft:spruce_leaves', 'minecraft:dark_oak_leaves', 'minecraft:acacia_leaves', 'minecraft:birch_leaves', 'minecraft:azalea_leaves', 'minecraft:flowering_azalea_leaves', 'tfc:wood/leaves/acacia', 'tfc:wood/leaves/ash', 'tfc:wood/leaves/aspen', 'tfc:wood/leaves/birch', 'tfc:wood/leaves/blackwood', 'tfc:wood/leaves/chestnut', 'tfc:wood/leaves/douglas_fir', 'tfc:wood/leaves/hickory', 'tfc:wood/leaves/kapok', 'tfc:wood/leaves/maple', 'tfc:wood/leaves/oak', 'tfc:wood/leaves/palm', 'tfc:wood/leaves/pine', 'tfc:wood/leaves/rosewood', 'tfc:wood/leaves/sequoia', 'tfc:wood/leaves/spruce', 'tfc:wood/leaves/sycamore', 'tfc:wood/leaves/white_cedar', 'tfc:wood/leaves/willow', 'twilightforest:rainbow_oak_leaves', 'twilightforest:twilight_oak_leaves', 'twilightforest:canopy_leaves', 'twilightforest:mangrove_leaves', 'twilightforest:dark_leaves', 'twilightforest:time_leaves', 'twilightforest:transformation_leaves', 'twilightforest:mining_leaves', 'twilightforest:sorting_leaves', 'twilightforest:thorn_leaves', 'twilightforest:beanstalk_leaves', 'myrtrees:rubberwood_leaves', 'tconstruct:earth_slime_leaves', 'tconstruct:sky_slime_leaves', 'tconstruct:ender_slime_leaves', 'tfc:plant/cherry_leaves', 'tfc:plant/green_apple_leaves', 'tfc:plant/lemon_leaves', 'tfc:plant/olive_leaves', 'tfc:plant/orange_leaves', 'tfc:plant/peach_leaves', 'tfc:plant/plum_leaves', 'tfc:plant/red_apple_leaves'],
+            'medium': ['tfc:plant/leafy_kelp', 'tfc:plant/winged_kelp'],
+            'high': ['coralstfc:coral_powder']
+        },
+        'sulfur': {
+            'medium': ['minecraft:charcoal'],
+            'high': ['minecraft:white_wool', 'minecraft:orange_wool', 'minecraft:magenta_wool', 'minecraft:light_blue_wool', 'minecraft:yellow_wool', 'minecraft:lime_wool', 'minecraft:pink_wool', 'minecraft:gray_wool', 'minecraft:light_gray_wool', 'minecraft:cyan_wool', 'minecraft:purple_wool', 'minecraft:blue_wool', 'minecraft:brown_wool', 'minecraft:green_wool', 'minecraft:red_wool', 'minecraft:black_wool']
+        }
+    }
+    //#minecraft:wool = ['minecraft:white_wool','minecraft:orange_wool','minecraft:magenta_wool','minecraft:light_blue_wool','minecraft:yellow_wool','minecraft:lime_wool','minecraft:pink_wool','minecraft:gray_wool','minecraft:light_gray_wool','minecraft:cyan_wool','minecraft:purple_wool','minecraft:blue_wool','minecraft:brown_wool','minecraft:green_wool','minecraft:red_wool','minecraft:black_wool']
+    //#forge:kelp = ['tfc:plant/leafy_kelp','tfc:plant/winged_kelp']
+    //#minecraft:leaves = ['minecraft:jungle_leaves','minecraft:oak_leaves','minecraft:spruce_leaves','minecraft:dark_oak_leaves','minecraft:acacia_leaves','minecraft:birch_leaves','minecraft:azalea_leaves','minecraft:flowering_azalea_leaves','tfc:wood/leaves/acacia','tfc:wood/leaves/ash','tfc:wood/leaves/aspen','tfc:wood/leaves/birch','tfc:wood/leaves/blackwood','tfc:wood/leaves/chestnut','tfc:wood/leaves/douglas_fir','tfc:wood/leaves/hickory','tfc:wood/leaves/kapok','tfc:wood/leaves/maple','tfc:wood/leaves/oak','tfc:wood/leaves/palm','tfc:wood/leaves/pine','tfc:wood/leaves/rosewood','tfc:wood/leaves/sequoia','tfc:wood/leaves/spruce','tfc:wood/leaves/sycamore','tfc:wood/leaves/white_cedar','tfc:wood/leaves/willow','twilightforest:rainbow_oak_leaves','twilightforest:twilight_oak_leaves','twilightforest:canopy_leaves','twilightforest:mangrove_leaves','twilightforest:dark_leaves','twilightforest:time_leaves','twilightforest:transformation_leaves','twilightforest:mining_leaves','twilightforest:sorting_leaves','twilightforest:thorn_leaves','twilightforest:beanstalk_leaves','myrtrees:rubberwood_leaves','tconstruct:earth_slime_leaves','tconstruct:sky_slime_leaves','tconstruct:ender_slime_leaves']
+
     Object.keys(pollution_filter_map).forEach(pollution_type => {
         Object.keys(pollution_filter_map[pollution_type]).forEach(filter_tier => {
             pollution_filter_map[pollution_type][filter_tier].forEach(filter_item => {
@@ -40,14 +96,15 @@ onEvent('item.tooltip', tooltip => {
                     if (!tooltip.shift) {
                         text.add(1, [Text.gold('Hold '), Text.yellow('Shift'), Text.gold(' to see more info')])
                     } else {
-                        text.add(1, [Text.gold("This item is a "), Text.yellow(`${filter_tier}-tier ${pollution_type} filter`),Text.gold(".")])
-                        text.add(2, Text.gold("Place inside of a filter frame and route pollution"))
-                        text.add(3, Text.gold("using pumps, vents and chimneys."))
+                        text.add(1, [Text.gold('This item is a '), Text.yellow(`${filter_tier}-tier ${pollution_type} filter`),Text.gold('.')])
+                        text.add(2, Text.gold('Place inside of a filter frame and route pollution'))
+                        text.add(3, Text.gold('using pumps, vents and chimneys.'))
                     }
                 })
             })
         })
     })
+
     tooltip.addAdvanced('firmalife:drying_mat', (item, advanced, text) => {
         if (!tooltip.shift) {
             text.add(1, [Text.gold('Hold '), Text.yellow('Shift'), Text.gold(' to see more info')])
